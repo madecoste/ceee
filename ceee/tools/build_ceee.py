@@ -39,19 +39,13 @@ def _AbsolutePath(path):
   return os.path.abspath(os.path.join(_SRC_DIR, path))
 
 
-_CHROME_SOLUTION = _AbsolutePath('chrome/chrome.sln')
+_CEEE_SOLUTION = _AbsolutePath('ceee/ceee.sln')
 
 
 # List of project files to build.
 _PROJECTS_TO_BUILD = [
-    # Chrome
-    _AbsolutePath('chrome/chrome.vcproj'),
-    # Chrome DLL
-    _AbsolutePath('chrome/chrome_dll.vcproj'),
-    # CEEE
+    # This project actually depends on all the necessary projects for CEEE.
     _AbsolutePath('ceee/ceee_all.vcproj'),
-    # The mini installer
-    _AbsolutePath('chrome_frame/npchrome_frame.vcproj'),
 ]
 
 
@@ -98,7 +92,7 @@ class CeeeBuilder(object):
 
 
 def Main(argv):
-  solution = vs_solution.VsSolution(_CHROME_SOLUTION)
+  solution = vs_solution.VsSolution(_CEEE_SOLUTION)
   solution.EnsureVisible()
   runner = CeeeBuilder(solution, _PROJECTS_TO_BUILD)
 

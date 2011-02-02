@@ -8,6 +8,8 @@
       'target_name': 'ceee_all',
       'type': 'none',
       'dependencies': [
+        '../chrome/chrome.gyp:chrome',
+        '../chrome_frame/chrome_frame.gyp:npchrome_frame',
         'common/common.gyp:ceee_common_unittests',
         'ie/ie.gyp:ceee_ie_all',
         'firefox/firefox.gyp:xpi',
