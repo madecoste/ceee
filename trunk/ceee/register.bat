@@ -5,7 +5,7 @@ REM found in the LICENSE file.
 echo Attempting to register CEEE components
 echo If something fails make sure that the files exist and that you're
 echo running from an administrator command prompt.
-pushd %~dp0%..\chrome\Debug\servers
+pushd %~dp0%Debug\servers
 regsvr32 /s npchrome_frame.dll
 regsvr32 /s ceee_ie.dll
 regsvr32 /s ceee_installer_helper.dll
