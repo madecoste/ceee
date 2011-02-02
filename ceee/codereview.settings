@@ -1,0 +1,5 @@
+# This file is used by gcl to get repository specific information.
+CODE_REVIEW_SERVER: codereview.appspot.com
+VIEW_VC: http://code.google.com/p/ceee/source/browse/#svn/trunk
+CC_LIST: ceee-changes@googlegroups.com
+TRY_ON_UPLOAD: False
